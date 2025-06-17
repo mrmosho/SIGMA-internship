@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ### 1. Build Index from CSV
 
 ```bash
-python cli.py index data.csv
+python single_cli.py index data.csv
 ```
 
 Options:
@@ -37,13 +37,13 @@ Options:
 
 Example:
 ```bash
-python cli.py index products.csv --batch-size 50
+python single_cli.py index products.csv --batch-size 50
 ```
 
 ### 2. Search the Index
 
 ```bash
-python cli.py search "your search query"
+python single_cli.py search "your search query"
 ```
 
 Options:
@@ -66,26 +66,12 @@ Lets you search repeatedly without reloading the index.
 ### 4. Check Status
 
 ```bash
-python cli.py status
+python single_cli.py status
 ```
 
 Shows index statistics and information.
 
-## File Structure
 
-```
-vector-search-cli/
-├── app/
-│   ├── embedder.py      # Text embedding logic
-│   ├── indexer.py       # FAISS index creation
-│   ├── searcher.py      # Search functionality
-│   └── utils.py         # Helper functions
-├── cli.py               # Main CLI interface
-├── requirements.txt     # Python dependencies
-├── README.md           # This file
-├── data.csv            # Your input dataset
-├── index.ivf           # Generated FAISS index
-└── metadata.json       # Generated metadata storage
 ```
 
 ## Quick Start Example
@@ -97,7 +83,7 @@ vector-search-cli/
    ```
 3. **Search**:
    ```bash
-   python cli.py search "what you're looking for"
+   python single_cli.py search "what you're looking for"
    ```
 
 ## CSV Format
